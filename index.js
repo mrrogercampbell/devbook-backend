@@ -12,6 +12,8 @@ const routes = require("./Routes/appRoutes");
 
 app.use("/", routes);
 
-app.listen(3001, () => {
-  console.log("DevBook is listening on port 3001");
+app.set("port", process.env.PORT || 3001);
+
+app.listen(app.get("port"), () => {
+  console.log("Server listening on port " + app.get("port"));
 });
