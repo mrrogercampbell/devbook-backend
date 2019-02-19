@@ -6,69 +6,80 @@ mongoose.connect("mongodb://localhost/devbook");
 mongoose.Promise = Promise;
 
 module.exports = {
-  // (GET Request) List all Users
-  index: (req, res) => {
-    User.find({}).then(users => {
-      res.render("userViews/usersIndex", { users });
-    });
-  },
-  //(GET Request) Render newUserform.hbs
-  new: (req, res) => {
-    res.render("userViews/newUserForm");
-  },
   //(POST Request) Create new user in the database
   create: (req, res) => {
     User.create({
+      userName: req.body.userName,
+      email: req.body.email,
       firstName: req.body.firstName,
-      middleName: req.body.middleName
+      lastName: req.body.lastName,
+      profilePic: req.body.profilePic,
+      location: req.body.location,
+      gitHubUrl: req.body.gitHubUrl,
+      employer: req.body.employer,
+      specialty: req.body.specialty,
+      projects: req.body.projects
     }).then(newUser => {
       console.log(`Hey Check Out the New User ${newUser}`);
       // res.redirect('/success')
       res.redirect(`/user/${newUser.id}`);
     });
   },
-  //(GET Request) Render newUserSuccessPage.hbs
-  success: (req, res) => {
-    res.render("userViews/newUserSuccessPage");
-  },
-  // (GET Request) Render a View to Show one User Profile
-  showOne: (req, res) => {
-    User.findOne({ _id: req.params.id }).then(user => {
-      res.render("userViews/singleUserView", { user });
-    });
-  },
+
   //(DELETE Request) Delete a User Profile
-  delete: (req, res) => {
+  destroyProfile: (req, res) => {
     User.findOneAndRemove({ _id: req.params.id }).then(user => {
       res.redirect(`/user`);
     });
   },
 
   // (GET Request) Render form to update a single user
-  edit: (req, res) => {
+  editProfile: (req, res) => {
     User.findOne({ _id: req.params.id }).then(user => {
       res.render("userViews/updateUserForm.hbs", { user });
     });
   },
-  // (PUT Request) Update resource in the database
-  update: (req, res) => {
+
+  //(GET Request) Render new user form
+  new: (req, res) => {
+    res.render("");
+  },
+
+  // (GET Request) Render a View to Show one User Profile
+  profile: (req, res) => {
+    User.findOne({ _id: req.params.id }).then(user => {
+      res.render("userViews/singleUserView", { user });
+    });
+  },
+
+  //  (GE T Request) List query results
+  //   searchResults: (req, res) => {
+  //     User.find({}).then(users => {
+  //       res.render("userViews/usersIndex", { users });
+  //     });
+  //   },
+
+  //(GET Request) Render a view tells users their profile has been created
+  success: (req, res) => {
+    res.render("userViews/newUserSuccessPage");
+  },
+
+  // (PUT Request) Updates user profile in the database
+  updateProfile: (req, res) => {
     User.findOneAndUpdate(
       { _id: req.params.id },
       {
         $set: {
-          name: {
-            firstName: req.body.firstName,
-            middleName: req.body.middleName,
-            lastName: req.body.lastName
-            // serialNumber: req.body.serialNumber,
-          },
-          rank: req.body.rank,
-          placeOfBirth: req.body.placeOfBirth,
-          yearOfBirth: req.body.yearOfBirth,
-          monthOfBirth: req.body.monthOfBirth,
-          dayOfBirth: req.body.dayOfBirth,
-          gender: req.body.gender,
-          maritalStatus: req.body.maritalStatus
+          userName: req.body.userName,
+          email: req.body.email,
+          firstName: req.body.firstName,
+          lastName: req.body.lastName,
+          profilePic: req.body.profilePic,
+          location: req.body.location,
+          gitHubUrl: req.body.gitHubUrl,
+          employer: req.body.employer,
+          specialty: req.body.specialty,
+          projects: req.body.projects
         }
       }
     ).then(user => {
