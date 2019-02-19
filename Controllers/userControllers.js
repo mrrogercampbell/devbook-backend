@@ -6,6 +6,12 @@ mongoose.connect("mongodb://localhost/devbook");
 mongoose.Promise = Promise;
 
 module.exports = {
+  index: (req, res) => {
+    User.find({}).then(allUsers => {
+      res.json(allUsers);
+    });
+  },
+
   //(POST Request) Create new user in the database
   create: (req, res) => {
     User.create({
@@ -61,7 +67,8 @@ module.exports = {
 
   //(GET Request) Render a view tells users their profile has been created
   success: (req, res) => {
-    res.render("userViews/newUserSuccessPage");
+    // res.send(<h1>Yup You did it!</h1>);
+    res.send("Yup You did it!");
   },
 
   // (PUT Request) Updates user profile in the database
