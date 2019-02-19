@@ -1,0 +1,14 @@
+[
+  {
+    "userName": "String",
+    "email": "String",
+    "firstName": "String",
+    "lastName": "String",
+    "profilePic": "String",
+    "location": "String",
+    "gitHubUrl": "String",
+    "employer": "String",
+    "specialty": "String",
+    "projects": "String"
+  }
+]
