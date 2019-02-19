@@ -1,12 +1,13 @@
 const mongoose = require("mongoose");
 
+if (process.env.NODE_ENV == "production") {
+  mongoose.connect(process.env.MLAB_URL, { useMongoClient: true });
+} else {
+  mongoose.connect("mongodb://localhost/devbook-backend", {
+    useMongoClient: true
+  });
+}
+
 mongoose.Promise = Promise;
-
-const mongoUri = "mongodb://localhost/devbook";
-
-mongoose
-  .connect(mongoUri, { useNewUrlParser: true })
-  .then(connection => console.log("Connection established to db"))
-  .catch(connectionError => console.log("Connection failed", connectionError));
 
 module.exports = mongoose;
