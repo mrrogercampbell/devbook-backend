@@ -47,8 +47,8 @@ module.exports = {
 
   // (GET Request) Render a View to Show one User Profile
   profile: (req, res) => {
-    User.findOne({ _id: req.params.id }).then(user => {
-      res.render("userViews/singleUserView", { user });
+    User.findOne({ _id: req.params.id }).then(singleUser => {
+      res.json(singleUser);
     });
   },
 

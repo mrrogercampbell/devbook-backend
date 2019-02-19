@@ -10,7 +10,7 @@ router.post("/", userController.create);
 
 // router.get("/new", userController.new);
 
-// router.get("/:id", userController.profile);
+router.get("/:id", userController.profile);
 
 // router.get("/results", userController.searchResults);
 
