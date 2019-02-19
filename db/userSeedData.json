@@ -1,14 +1,38 @@
 [
   {
-    "userName": "String",
-    "email": "String",
-    "firstName": "String",
-    "lastName": "String",
-    "profilePic": "String",
-    "location": "String",
-    "gitHubUrl": "String",
-    "employer": "String",
-    "specialty": "String",
-    "projects": "String"
+    "userName": "CourtneyLTyler",
+    "email": "courtneytlyler@email.com",
+    "firstName": "Courtney",
+    "lastName": "Tyler",
+    "profilePic": "https://avatars3.githubusercontent.com/u/32782253?s=460&v=4",
+    "location": "Washington DC",
+    "gitHubUrl": "https://github.com/CourtneyLTyler",
+    "employer": "",
+    "specialty": "react, javasrcipt",
+    "projects": "All the projects"
+  },
+  {
+    "userName": "Miftahamid",
+    "email": "Miftahamid@email.com",
+    "firstName": "Mifta",
+    "lastName": "Hamid",
+    "profilePic": "https://media.licdn.com/dms/image/C4E03AQE0GP8pD1AAcg/profile-displayphoto-shrink_800_800/0?e=1556150400&v=beta&t=5ONaJLQV-7gxwX3S4P1XXc0Fp_uGfZZupEcFgwb0Nas",
+    "location": "Washington DC",
+    "gitHubUrl": "",
+    "employer": "Self-Employed",
+    "specialty": "node.js, javascript",
+    "projects": "Best Project Ever"
+  },
+  {
+    "userName": "rc1336",
+    "email": "rogercampbell@email.com",
+    "firstName": "Roger",
+    "lastName": "Campbell",
+    "profilePic": "https://avatars0.githubusercontent.com/u/43559077?s=460&v=4",
+    "location": "Washington DC",
+    "gitHubUrl": "https://github.com/rc1336",
+    "employer": "Blizzard Entertainment",
+    "specialty": "react, express",
+    "projects": "Project all the way down"
   }
 ]
