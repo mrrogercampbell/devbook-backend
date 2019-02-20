@@ -2,22 +2,19 @@
     {
         "content": "String",
         "createdAt": {
-            "Type": "Date",
-            "Default": "Date.now()"
+            "Type": "Date"
         }
     },
     {
         "content": "String",
         "createdAt": {
-            "Type": "Date",
-            "Default": "Date.now()"
+            "Type": "Date"
         }
     },
     {
         "content": "String",
         "createdAt": {
-            "Type": "Date",
-            "Default": "Date.now()"
+            "Type": "Date"
         }
     }
 ]

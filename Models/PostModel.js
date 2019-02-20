@@ -5,7 +5,7 @@ const Post = new Schema({
     content: String,
     createdAt: {
         Type: Date,
-        Default: Date.now()
+        // Default: Date.now()
     }
 });
 
