@@ -15,15 +15,10 @@ module.exports = {
   //(POST Request) Create new Project in the database
   create: (req, res) => {
     Project.create({
-      content: req.body.content,
-      position: req.body.position,
-      company: req.body.company,
-      location: req.body.location,
-      companyLogo: req.body.companyLogo,
-      createdAt: {
-        Type: Date,
-        Default: Date.now()
-      }
+      linkToRepo: req.body.linkToRepo,
+      title: req.body.title,
+      description: req.body.description,
+      Thumbnail: req.body.Thumbnail,
     }).then(newProject => {
       console.log(`Hey Check Out the New Project ${newProject}`);
       // res.redirect('/success')
@@ -76,15 +71,10 @@ module.exports = {
       { _id: req.params.id },
       {
         $set: {
-          content: req.body.content,
-          position: req.body.position,
-          company: req.body.company,
-          location: req.body.location,
-          companyLogo: req.body.companyLogo,
-          createdAt: {
-            Type: Date,
-            Default: Date.now()
-          }
+          linkToRepo: req.body.linkToRepo,
+          title: req.body.title,
+          description: req.body.description,
+          Thumbnail: req.body.Thumbnail,
         }
       }
     ).then(Project => {
