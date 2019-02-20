@@ -1,6 +1,6 @@
-const mongoose = require("../Models/CommentModel");
+const mongoose = require("../../Models/CommentsModel");
 const seeds = require("./commentSeedData.json");
-const Comment = mongoose.model("commentModel");
+const Comment = mongoose.model("commentsModel");
 
 mongoose.Promise = Promise;
 
