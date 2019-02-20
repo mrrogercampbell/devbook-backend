@@ -1,0 +1,23 @@
+[
+    {
+        "content": "String",
+        "createdAt": {
+            "Type": "Date",
+            "Default": "Date.now()"
+        }
+    },
+    {
+        "content": "String",
+        "createdAt": {
+            "Type": "Date",
+            "Default": "Date.now()"
+        }
+    },
+    {
+        "content": "String",
+        "createdAt": {
+            "Type": "Date",
+            "Default": "Date.now()"
+        }
+    }
+]
