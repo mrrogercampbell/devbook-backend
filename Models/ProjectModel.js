@@ -9,7 +9,7 @@ const Project = new Schema({
   companyLogo: String,
   createdAt: {
     Type: Date,
-    Default: Date.now()
+    // Default: Date.now()
   }
   // user:
   // userId: [Linked Model ]
