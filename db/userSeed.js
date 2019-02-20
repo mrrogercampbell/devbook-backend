@@ -7,7 +7,7 @@ mongoose.Promise = Promise;
 User.remove({}).then(_ => {
   console.log("Dropped the DB");
   User.collection
-    .insertMany(seeds)
+    .insert(seeds)
     .then(newUser => {
       console.log(seeds);
       mongoose.connection.close();

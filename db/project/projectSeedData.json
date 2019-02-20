@@ -1,23 +1,20 @@
 [
     {
-        "content": "String",
-        "position": "String",
-        "company": "String",
-        "location": "String",
-        "companyLogo": "String"
+        "linkToRepo": "linkToRepo",
+        "title": "title",
+        "description": "description",
+        "Thumbnail": "Thumbnail"
     },
     {
-        "content": "String",
-        "position": "String",
-        "company": "String",
-        "location": "String",
-        "companyLogo": "String"
+        "linkToRepo": "linkToRepo",
+        "title": "title",
+        "description": "description",
+        "Thumbnail": "Thumbnail"
     },
     {
-        "content": "String",
-        "position": "String",
-        "company": "String",
-        "location": "String",
-        "companyLogo": "String"
+        "linkToRepo": "linkToRepo",
+        "title": "title",
+        "description": "description",
+        "Thumbnail": "Thumbnail"
     }
 ]

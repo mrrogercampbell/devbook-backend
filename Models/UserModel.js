@@ -12,13 +12,13 @@ const User = new Schema({
     employer: String,
     specialty: String,
     projects: String,
-        // [Linked Model]
+    // [Linked Model]
     comments: String,
-        // [Linked Model]
-    post: String, 
-        // [Linked Model]
-    jobs: String, 
-        // [Linked Model]
+    // [Linked Model]
+    post: String,
+    // [Linked Model]
+    jobs: String,
+    // [Linked Model]
 })
 
 mongoose.model('userModel', User)
