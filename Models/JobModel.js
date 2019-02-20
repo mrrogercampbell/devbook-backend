@@ -1,7 +1,7 @@
 const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
 
-const Job = new Schema({
+const Jobs = new Schema({
     content: String,
     position: String,
     company: String,
@@ -16,6 +16,6 @@ const Job = new Schema({
     // userName: [Linked Model]
 });
 
-mongoose.model("JobModel", Job);
+mongoose.model("JobModel", Jobs);
 
 module.exports = mongoose;
