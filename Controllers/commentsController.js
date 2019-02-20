@@ -32,14 +32,14 @@ module.exports = {
     },
 
     //(DELETE Request) Delete a Comments Profile
-    destroyProfile: (req, res) => {
+    destroyComment: (req, res) => {
         Comments.findOneAndRemove({ _id: req.params.id }).then(Comments => {
             res.redirect(`/Comments`);
         });
     },
 
     // (GET Request) Render form to update a single Comments
-    editProfile: (req, res) => {
+    editComment: (req, res) => {
         Comments.findOne({ _id: req.params.id }).then(Comments => {
             res.render("CommentsViews/updateCommentsForm.hbs", { Comments });
         });
@@ -51,7 +51,7 @@ module.exports = {
     },
 
     // (GET Request) Render a View to Show one Comments Profile
-    profile: (req, res) => {
+    comment: (req, res) => {
         Comments.findOne({ _id: req.params.id }).then(singleComments => {
             res.json(singleComments);
         });
@@ -71,7 +71,7 @@ module.exports = {
     },
 
     // (PUT Request) Updates Comments profile in the database
-    updateProfile: (req, res) => {
+    updateComment: (req, res) => {
         Comments.findOneAndUpdate(
             { _id: req.params.id },
             {

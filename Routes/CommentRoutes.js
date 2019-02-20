@@ -6,18 +6,18 @@ router.get("/", CommentController.index);
 
 router.post("/", CommentController.create);
 
-// router.delete("/:id", CommentController.destroyProfile);
+// router.delete("/:id", CommentController.destroyComment);
 
-// router.get("/:id/edit", CommentController.editProfile);
+// router.get("/edit/:id", CommentController.editComment);
 
 // router.get("/new", CommentController.new);
 
-router.get("/:id", CommentController.profile);
+router.get("/:id", CommentController.comment);
 
 // router.get("/results", CommentController.searchResults);
 
 // router.get("/success", CommentController.success);
 
-// router.put("/:id", CommentController.updateProfile);
+// router.put("/:id", CommentController.updateComment);
 
 module.exports = router;
