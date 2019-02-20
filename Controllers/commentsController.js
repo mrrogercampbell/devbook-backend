@@ -41,7 +41,7 @@ module.exports = {
     // (GET Request) Render form to update a single Comments
     editComment: (req, res) => {
         Comments.findOne({ _id: req.params.id }).then(Comments => {
-            res.render("CommentsViews/updateCommentsForm.hbs", { Comments });
+            res.json(Comments)
         });
     },
 
