@@ -15,15 +15,10 @@ module.exports = {
     //(POST Request) Create new Comments in the database
     create: (req, res) => {
         Comments.create({
+            postId: req.body.postId,
+            userId: req.body.userId,
             content: req.body.content,
-            position: req.body.position,
-            company: req.body.company,
-            location: req.body.location,
-            companyLogo: req.body.companyLogo,
-            createdAt: {
-                Type: Date,
-                Default: Date.now()
-            }
+            likes: req.body.likes,
         }).then(newComments => {
             console.log(`Hey Check Out the New Comments ${newComments}`);
             // res.redirect('/success')

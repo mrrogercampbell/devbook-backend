@@ -16,10 +16,6 @@ module.exports = {
     create: (req, res) => {
         Post.create({
             content: String,
-            createdAt: {
-                Type: Date,
-                Default: Date.now()
-            }
         }).then(newPost => {
             console.log(`Hey Check Out the New Post ${newPost}`);
             // res.redirect('/success')

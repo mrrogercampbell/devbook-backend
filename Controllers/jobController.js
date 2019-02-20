@@ -7,9 +7,10 @@ mongoose.Promise = Promise;
 
 module.exports = {
     index: (req, res) => {
-        Job.find({}).then(allJobs => {
-            res.json(allJobs);
-        });
+        Job.find({})
+            .then(allJobs => {
+                res.json(allJobs);
+            });
     },
 
     //(POST Request) Create new Job in the database
@@ -20,14 +21,10 @@ module.exports = {
             company: req.body.company,
             location: req.body.location,
             logoURL: req.body.logoURL,
-            createdAt: {
-                Type: Date,
-                Default: Date.now()
-            }
         }).then(newJob => {
             console.log(`Hey Check Out the New Job ${newJob}`);
             // res.redirect('/success')
-            res.redirect(`/Job/${newJob.id}`);
+            // res.redirect(`/Jobs/${newJob.id}`);
         });
     },
 
@@ -80,11 +77,7 @@ module.exports = {
                     position: req.body.position,
                     company: req.body.company,
                     location: req.body.location,
-                    companyLogo: req.body.companyLogo,
-                    createdAt: {
-                        Type: Date,
-                        Default: Date.now()
-                    }
+                    companyLogo: req.body.companyLogo
                 }
             }
         ).then(Job => {
