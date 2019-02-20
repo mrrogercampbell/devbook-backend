@@ -15,11 +15,7 @@ module.exports = {
     //(POST Request) Create new Post in the database
     create: (req, res) => {
         Post.create({
-            content: req.body.content,
-            position: req.body.position,
-            company: req.body.company,
-            location: req.body.location,
-            companyLogo: req.body.companyLogo,
+            content: String,
             createdAt: {
                 Type: Date,
                 Default: Date.now()
@@ -76,11 +72,7 @@ module.exports = {
             { _id: req.params.id },
             {
                 $set: {
-                    content: req.body.content,
-                    position: req.body.position,
-                    company: req.body.company,
-                    location: req.body.location,
-                    companyLogo: req.body.companyLogo,
+                    content: String,
                     createdAt: {
                         Type: Date,
                         Default: Date.now()
