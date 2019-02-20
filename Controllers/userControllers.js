@@ -1,7 +1,7 @@
 const mongoose = require("../Models/userModel");
 const User = mongoose.model("userModel");
 
-mongoose.connect("mongodb://localhost/devbook");
+mongoose.connect("mongodb://localhost/devbook-backend");
 
 mongoose.Promise = Promise;
 

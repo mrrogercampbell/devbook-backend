@@ -1,7 +1,7 @@
 const mongoose = require("../Models/ProjectModel");
 const Project = mongoose.model("ProjectModel");
 
-mongoose.connect("mongodb://localhost/devbook");
+mongoose.connect("mongodb://localhost/devbook-backend");
 
 mongoose.Promise = Promise;
 
