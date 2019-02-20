@@ -6,9 +6,9 @@ const Job = new Schema({
     position: String,
     company: String,
     location: String,
-    companyLogo: String,
+    logoURL: String,
     createdAt: {
-        Type: Date,
+        Type: Date
         // Default: Date.now()
     }
     // user:

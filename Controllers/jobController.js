@@ -19,7 +19,7 @@ module.exports = {
             position: req.body.position,
             company: req.body.company,
             location: req.body.location,
-            companyLogo: req.body.companyLogo,
+            logoURL: req.body.logoURL,
             createdAt: {
                 Type: Date,
                 Default: Date.now()
