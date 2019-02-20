@@ -1,0 +1,32 @@
+[
+    {
+        "content": "fka",
+        "position": "kafal",
+        "company": "String",
+        "location": "String",
+        "companyLogo": "String",
+        "createdAt": {
+            "Type": "Date"
+        }
+    },
+    {
+        "content": "String",
+        "position": "String",
+        "company": "String",
+        "location": "String",
+        "companyLogo": "String",
+        "createdAt": {
+            "Type": "Date"
+        }
+    },
+    {
+        "content": "String",
+        "position": "String",
+        "company": "String",
+        "location": "String",
+        "companyLogo": "String",
+        "createdAt": {
+            "Type": "Date"
+        }
+    }
+]
