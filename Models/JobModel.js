@@ -16,6 +16,12 @@ const Jobs = new Schema({
             type: Schema.Types.ObjectId,
             ref: "userModel"
         }
+    ],
+    comment: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "commentsModel"
+        }
     ]
 });
 
