@@ -17,8 +17,12 @@ const User = new Schema({
             ref: "ProjectModel"
         }
     ],
-    comments: String,
-    // [Linked Model]
+    comments: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "commentsModel"
+        }
+    ],
     post: String,
     // [Linked Model]
     jobs: String,
