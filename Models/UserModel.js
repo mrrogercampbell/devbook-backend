@@ -21,6 +21,6 @@ const User = new Schema({
     // [Linked Model]
 })
 
-mongoose.model('userModel', User)
 
-module.exports = mongoose
+
+module.exports = mongoose.model('UserModel', User)

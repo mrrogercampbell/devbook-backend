@@ -1,10 +1,6 @@
 const mongoose = require("../Models/JobModel");
 const Job = mongoose.model("JobModel");
 
-// mongoose.connect("mongodb://localhost/devbook-backend");
-
-// mongoose.Promise = Promise;
-
 module.exports = {
     index: (req, res) => {
         Job.find({})
@@ -21,12 +17,11 @@ module.exports = {
             company: req.body.company,
             location: req.body.location,
             logoURL: req.body.logoURL,
-        }).then(newJob => {
-            console.log(`Hey Check Out the New Job ${newJob}`);
-            res.json(newJob)
-            // res.redirect('/success')
-            // res.redirect(`/Jobs/${newJob.id}`);
-        });
+        })
+            .then(newJob => {
+                console.log(`Hey Check Out the New Job ${newJob}`);
+                res.json(newJob)
+            });
     },
 
     //(DELETE Request) Delete a Job Profile

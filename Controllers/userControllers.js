@@ -1,9 +1,5 @@
-const mongoose = require("../Models/userModel");
-const User = mongoose.model("userModel");
-
-mongoose.connect("mongodb://localhost/devbook-backend");
-
-mongoose.Promise = Promise;
+const mongoose = require("../Models/UserModel");
+const User = mongoose.model("UserModel");
 
 module.exports = {
   index: (req, res) => {
@@ -25,11 +21,11 @@ module.exports = {
       employer: req.body.employer,
       specialty: req.body.specialty,
       projects: req.body.projects
-    }).then(newUser => {
-      console.log(`Hey Check Out the New User ${newUser}`);
-      // res.redirect('/success')
-      res.redirect(`/user/${newUser.id}`);
-    });
+    })
+      .then(newUser => {
+        console.log(`Hey Check Out the New Job ${newUser}`);
+        res.json(newUser)
+      });
   },
 
   //(DELETE Request) Delete a User Profile

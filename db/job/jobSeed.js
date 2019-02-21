@@ -10,7 +10,6 @@ Job.remove({}).then(_ => {
         .insert(seeds)
         .then(newJob => {
             console.log(seeds);
-            // mongoose.connection.close();
             process.exit()
         })
         .catch(err => {
