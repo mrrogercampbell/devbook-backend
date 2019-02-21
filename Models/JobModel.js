@@ -19,6 +19,6 @@ const Jobs = new Schema({
     ]
 });
 
-mongoose.model("JobModel", Jobs);
 
-module.exports = mongoose;
+
+module.exports = mongoose.model("JobModel", Jobs);

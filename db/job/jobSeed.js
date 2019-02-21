@@ -1,8 +1,8 @@
-const mongoose = require("../../Models/JobModel");
+const Job = require("../../Models/JobModel");
 const seeds = require("./jobSeedData.json");
-const Job = mongoose.model("JobModel");
+// const Job = mongoose.model("JobModel");
 
-mongoose.Promise = Promise;
+// mongoose.Promise = Promise;
 
 Job.remove({}).then(_ => {
     console.log("Dropped the DB");
@@ -10,7 +10,8 @@ Job.remove({}).then(_ => {
         .insert(seeds)
         .then(newJob => {
             console.log(seeds);
-            mongoose.connection.close();
+            // mongoose.connection.close();
+            process.exit()
         })
         .catch(err => {
             console.log(err);
