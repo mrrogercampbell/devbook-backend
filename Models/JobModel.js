@@ -17,12 +17,12 @@ const Jobs = new Schema({
             ref: "userModel"
         }
     ],
-    comment: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "commentsModel"
-        }
-    ]
+    // comment: [
+    //     {
+    //         type: Schema.Types.ObjectId,
+    //         ref: "commentsModel"
+    //     }
+    // ]
 });
 
 

@@ -6,6 +6,12 @@ const Project = new Schema({
   title: String,
   description: String,
   Thumbnail: String,
+  comment: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "commentsModel"
+    }
+  ]
 });
 
 module.exports = mongoose.model("ProjectModel", Project);
