@@ -1,8 +1,5 @@
 const mongoose = require("../Models/UserModel");
 const seeds = require("./userSeedData.json");
-const User = mongoose.model("userModel");
-
-mongoose.Promise = Promise;
 
 User.remove({}).then(_ => {
   console.log("Dropped the DB");
@@ -10,7 +7,7 @@ User.remove({}).then(_ => {
     .insert(seeds)
     .then(newUser => {
       console.log(seeds);
-      mongoose.connection.close();
+      proccess.exit()
     })
     .catch(err => {
       console.log(err);
