@@ -11,8 +11,12 @@ const User = new Schema({
     gitHubUrl: String,
     employer: String,
     specialty: String,
-    projects: String,
-    // [Linked Model]
+    projects: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "ProjectModel"
+        }
+    ],
     comments: String,
     // [Linked Model]
     post: String,
