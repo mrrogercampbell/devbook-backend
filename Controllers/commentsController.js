@@ -1,10 +1,6 @@
 const mongoose = require("../Models/CommentsModel");
 const Comments = mongoose.model("commentsModel");
 
-mongoose.connect("mongodb://localhost/devbook-backend");
-
-mongoose.Promise = Promise;
-
 module.exports = {
     index: (req, res) => {
         Comments.find({}).then(allCommentss => {
@@ -19,11 +15,11 @@ module.exports = {
             userId: req.body.userId,
             content: req.body.content,
             likes: req.body.likes,
-        }).then(newComments => {
-            console.log(`Hey Check Out the New Comments ${newComments}`);
-            // res.redirect('/success')
-            res.redirect(`/Comments/${newComments.id}`);
-        });
+        })
+            .then(newJob => {
+                console.log(`Hey Check Out the New Job ${newJob}`);
+                res.json(newJob)
+            });
     },
 
     //(DELETE Request) Delete a Comments Profile

@@ -1,8 +1,5 @@
-const mongoose = require("../../Models/CommentsModel");
+const Comment = require("../../Models/CommentsModel");
 const seeds = require("./commentSeedData.json");
-const Comment = mongoose.model("commentsModel");
-
-mongoose.Promise = Promise;
 
 Comment.remove({}).then(_ => {
     console.log("Dropped the DB");
@@ -10,7 +7,7 @@ Comment.remove({}).then(_ => {
         .insert(seeds)
         .then(newComment => {
             console.log(seeds);
-            mongoose.connection.close();
+            process.exit()
         })
         .catch(err => {
             console.log(err);
