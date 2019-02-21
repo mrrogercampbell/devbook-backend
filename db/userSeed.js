@@ -1,4 +1,4 @@
-const mongoose = require("../Models/UserModel");
+const User = require("../Models/UserModel");
 const seeds = require("./userSeedData.json");
 
 User.remove({}).then(_ => {

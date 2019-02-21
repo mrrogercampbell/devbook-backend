@@ -1,10 +1,6 @@
 const mongoose = require("../Models/PostModel");
 const Post = mongoose.model("PostModel");
 
-mongoose.connect("mongodb://localhost/devbook");
-
-mongoose.Promise = Promise;
-
 module.exports = {
     index: (req, res) => {
         Post.find({}).then(allPosts => {
@@ -16,13 +12,12 @@ module.exports = {
     create: (req, res) => {
         Post.create({
             content: String,
-        }).then(newPost => {
-            console.log(`Hey Check Out the New Post ${newPost}`);
-            // res.redirect('/success')
-            res.redirect(`/Post/${newPost.id}`);
-        });
+        })
+            .then(newPost => {
+                console.log(`Hey Check Out the New Job ${newPost}`);
+                res.json(newPost)
+            });
     },
-
     //(DELETE Request) Delete a Post Profile
     destroyProfile: (req, res) => {
         Post.findOneAndRemove({ _id: req.params.id }).then(Post => {
