@@ -10,10 +10,13 @@ const Jobs = new Schema({
     createdAt: {
         Type: Date
         // Default: Date.now()
-    }
-    // user:
-    // userId: [Linked Model ]
-    // userName: [Linked Model]
+    },
+    user: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "userModel"
+        }
+    ]
 });
 
 mongoose.model("JobModel", Jobs);
