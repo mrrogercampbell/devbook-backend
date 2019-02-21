@@ -1,10 +1,6 @@
 const mongoose = require("../Models/ProjectModel");
 const Project = mongoose.model("ProjectModel");
 
-mongoose.connect("mongodb://localhost/devbook-backend");
-
-mongoose.Promise = Promise;
-
 module.exports = {
   index: (req, res) => {
     Project.find({}).then(allProjects => {
@@ -19,12 +15,13 @@ module.exports = {
       title: req.body.title,
       description: req.body.description,
       Thumbnail: req.body.Thumbnail,
-    }).then(newProject => {
-      console.log(`Hey Check Out the New Project ${newProject}`);
-      // res.redirect('/success')
-      res.redirect(`/Project/${newProject.id}`);
-    });
+    })
+      .then(newProject => {
+        console.log(`Hey Check Out the New Job ${newProject}`);
+        res.json(newProject)
+      });
   },
+
 
   //(DELETE Request) Delete a Project Profile
   destroyProfile: (req, res) => {

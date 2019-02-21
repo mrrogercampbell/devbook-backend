@@ -8,6 +8,4 @@ const Project = new Schema({
   Thumbnail: String,
 });
 
-mongoose.model("ProjectModel", Project);
-
-module.exports = mongoose;
+module.exports = mongoose.model("ProjectModel", Project);

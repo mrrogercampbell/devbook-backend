@@ -7,7 +7,7 @@ User.remove({}).then(_ => {
     .insert(seeds)
     .then(newUser => {
       console.log(seeds);
-      proccess.exit()
+      process.exit()
     })
     .catch(err => {
       console.log(err);
