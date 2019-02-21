@@ -6,7 +6,7 @@ router.get("/", JobController.index);
 
 router.post("/", JobController.create);
 
-// router.delete("/:id", JobController.destroyProfile);
+router.delete("/:id", JobController.destroy);
 
 // router.get("/:id/edit", JobController.editProfile);
 
@@ -18,6 +18,6 @@ router.get("/:id", JobController.profile);
 
 // router.get("/success", JobController.success);
 
-// router.put("/:id", JobController.updateProfile);
+router.put("/:id", JobController.update);
 
 module.exports = router;

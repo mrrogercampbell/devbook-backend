@@ -25,9 +25,9 @@ module.exports = {
     },
 
     //(DELETE Request) Delete a Job Profile
-    delete: (req, res) => {
+    destroy: (req, res) => {
         Job.findOneAndRemove({ _id: req.params.id }).then(Job => {
-            res.redirect(`/jobs`);
+            res.json(Job);
         });
     },
 
@@ -64,7 +64,7 @@ module.exports = {
     },
 
     // (PUT Request) Updates Job profile in the database
-    updateProfile: (req, res) => {
+    update: (req, res) => {
         Job.findOneAndUpdate(
             { _id: req.params.id },
             {
@@ -73,7 +73,7 @@ module.exports = {
                     position: req.body.position,
                     company: req.body.company,
                     location: req.body.location,
-                    companyLogo: req.body.companyLogo
+                    logoURL: req.body.logoURL,
                 }
             }
         ).then(Job => {
