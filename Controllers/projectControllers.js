@@ -14,7 +14,7 @@ module.exports = {
       linkToRepo: req.body.linkToRepo,
       title: req.body.title,
       description: req.body.description,
-      Thumbnail: req.body.Thumbnail,
+      Thumbnail: req.body.Thumbnail
     })
       .then(newProject => {
         console.log(`Hey Check Out the New Job ${newProject}`);

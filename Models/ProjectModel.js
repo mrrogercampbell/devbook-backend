@@ -6,7 +6,7 @@ const Project = new Schema({
   title: String,
   description: String,
   Thumbnail: String,
-  comment: [
+  comments: [
     {
       type: Schema.Types.ObjectId,
       ref: "commentsModel"

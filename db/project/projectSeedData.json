@@ -3,18 +3,33 @@
         "linkToRepo": "linkToRepo",
         "title": "title",
         "description": "description",
-        "Thumbnail": "Thumbnail"
+        "Thumbnail": "Thumbnail",
+        "comments": [
+            "Hey",
+            "Hello",
+            "will this work?"
+        ]
     },
     {
         "linkToRepo": "linkToRepo",
         "title": "title",
         "description": "description",
-        "Thumbnail": "Thumbnail"
+        "Thumbnail": "Thumbnail",
+        "comments": [
+            "Hey",
+            "Hello",
+            "will this work?"
+        ]
     },
     {
         "linkToRepo": "linkToRepo",
         "title": "title",
         "description": "description",
-        "Thumbnail": "Thumbnail"
+        "Thumbnail": "Thumbnail",
+        "comments": [
+            "Hey",
+            "Hello",
+            "will this work?"
+        ]
     }
 ]

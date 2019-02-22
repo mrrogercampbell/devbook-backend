@@ -11,7 +11,7 @@ module.exports = {
     //(POST Request) Create new Comments in the database
     create: (req, res) => {
         Comments.create({
-            postId: req.body.postId,
+            devPostId: req.body.devPostId,
             userId: req.body.userId,
             content: req.body.content,
             likes: req.body.likes,
@@ -23,7 +23,7 @@ module.exports = {
     },
 
     //(DELETE Request) Delete a Comments Profile
-    destroyComment: (req, res) => {
+    destroy: (req, res) => {
         Comments.findOneAndRemove({ _id: req.params.id }).then(Comments => {
             res.redirect(`/Comments`);
         });
@@ -41,10 +41,10 @@ module.exports = {
         res.render("");
     },
 
-    // (GET Request) Render a View to Show one Comments Profile
+    // (GET Request) Render a View to Show All Matching Comments Profile
     comment: (req, res) => {
-        Comments.findOne({ _id: req.params.id }).then(singleComments => {
-            res.json(singleComments);
+        Comments.find({ devPostId: req.params.devPostId }).then(showComments => {
+            res.json(showComments);
         });
     },
 
@@ -62,24 +62,19 @@ module.exports = {
     },
 
     // (PUT Request) Updates Comments profile in the database
-    updateComment: (req, res) => {
+    update: (req, res) => {
         Comments.findOneAndUpdate(
             { _id: req.params.id },
             {
                 $set: {
+                    devPostId: req.body.postId,
+                    userId: req.body.userId,
                     content: req.body.content,
-                    position: req.body.position,
-                    company: req.body.company,
-                    location: req.body.location,
-                    companyLogo: req.body.companyLogo,
-                    createdAt: {
-                        Type: Date,
-                        Default: Date.now()
-                    }
+                    likes: req.body.likes,
                 }
             }
         ).then(Comments => {
-            res.redirect(`/Comments/${Comments.id}`);
+            res.json(Comments);
         });
     }
 };

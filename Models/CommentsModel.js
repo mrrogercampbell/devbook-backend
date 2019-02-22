@@ -2,7 +2,7 @@ const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
 const Comments = new Schema({
-    postId: String,
+    devPostId: String,
     userId: String,
     content: String,
     likes: Number,
