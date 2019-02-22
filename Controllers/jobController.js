@@ -76,8 +76,10 @@ module.exports = {
                     logoURL: req.body.logoURL,
                 }
             }
-        ).then(Job => {
-            res.redirect(`/Job/${Job.id}`);
-        });
+        )
+            .then(updatedJob => {
+                console.log(`Hey Check Out the New Job ${updatedJob}`);
+                res.json(updatedJob)
+            });
     }
 };
