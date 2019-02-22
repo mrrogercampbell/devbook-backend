@@ -63,7 +63,7 @@ module.exports = {
   },
 
   // (PUT Request) Updates Project profile in the database
-  updateProfile: (req, res) => {
+  update: (req, res) => {
     Project.findOneAndUpdate(
       { _id: req.params.id },
       {
