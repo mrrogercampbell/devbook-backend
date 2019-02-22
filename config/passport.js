@@ -19,10 +19,9 @@ module.exports = function() {
     if (user) {
       return callback(null, { id: user.id });
     } else {
-      return callback(new Error("User not found"), null);
+      return callback(new Error("user not found"), null);
     }
   });
-
   passport.use(strategy);
 
   return {
