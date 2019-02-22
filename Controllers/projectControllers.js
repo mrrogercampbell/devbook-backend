@@ -24,9 +24,9 @@ module.exports = {
 
 
   //(DELETE Request) Delete a Project Profile
-  destroyProfile: (req, res) => {
+  destroy: (req, res) => {
     Project.findOneAndRemove({ _id: req.params.id }).then(Project => {
-      res.redirect(`/Project`);
+      res.json(Project)
     });
   },
 
@@ -71,7 +71,7 @@ module.exports = {
           linkToRepo: req.body.linkToRepo,
           title: req.body.title,
           description: req.body.description,
-          Thumbnail: req.body.Thumbnail,
+          Thumbnail: req.body.Thumbnail
         }
       }
     ).then(Project => {

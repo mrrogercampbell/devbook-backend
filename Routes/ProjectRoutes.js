@@ -6,7 +6,7 @@ router.get("/", ProjectController.index);
 
 router.post("/", ProjectController.create);
 
-// router.delete("/:id", ProjectController.destroyProfile);
+router.delete("/:id", ProjectController.destroy);
 
 // router.get("/:id/edit", ProjectController.editProfile);
 
@@ -18,6 +18,6 @@ router.get("/:id", ProjectController.profile);
 
 // router.get("/success", ProjectController.success);
 
-// router.put("/:id", ProjectController.updateProfile);
+router.put("/:id", ProjectController.update);
 
 module.exports = router;
