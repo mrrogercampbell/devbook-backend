@@ -75,7 +75,7 @@ module.exports = {
         }
       }
     ).then(Project => {
-      res.redirect(`/Project/${Project.id}`);
+      res.json(Project);
     });
   }
 };
