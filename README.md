@@ -5,10 +5,12 @@ DevBook is a full-stack application utilizing the MERN stack (Mongoose, Express,
 
 
 ## Brief Example
-Below is a snippet of our code which allows users to create a profile:
+Below is a snippet of our code which creates routing:
 
 
-![snippet of profile code](src/img/CodeSnipDevBook1.png?raw=true)
+![snippet of routes code](img/CodeSnipDevBookBackEnd.png?raw=true)
+
+
 
 
 ## Features Planned and Current Status
