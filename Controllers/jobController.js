@@ -19,7 +19,6 @@ module.exports = {
             logoURL: req.body.logoURL,
         })
             .then(newJob => {
-                console.log(`Hey Check Out the New Job ${newJob}`);
                 res.json(newJob)
             });
     },
