@@ -17,29 +17,29 @@ Below is a snippet of our code which creates routing:
 
 ### Bronze (MVP)
   * Achieve CRUD functionality in at least one model
-    * Status: Acheived
+    * Status: Achieved
   * Deploy (Heroku/Surge)
-    * Status: Acheived
+    * Status: Achieved
   * Styling applied throughout
-    * Status: Acheived
+    * Status: Achieved
 
 ### Silver
   * Incorporate User, Comment, Job, Project, and Discussion Models with full CRUD
-    * Status: Partially Acheived
+    * Status: Partially Achieved
       * User - CR, Comment - CR, Job - CRUD, Project - CRD, Discussion - None
   * Responsive design - displays on all screen sizes
-    * Status: To Acheive in future
+    * Status: To Achieve in future
       * Unable to attempt - time constraint
   * Authentication - users sign in/out, restrict features for authenticated users, render the current user's profile
-    * Status: Partially Acheived
+    * Status: Partially Achieved
       * Code partially written, unable to complete due to time constraint
       
 ### Gold
   * Incorporate an API
-    * Status: To Acheive in future
+    * Status: To Achieve in future
       * Unable to attempt - time constraint
   * Professional styling, UX/UI design principals incorporated
-    * Status: To Acheive in future
+    * Status: To Achieve in future
       * Unable to attempt - time constraint
       * Will require additional resources
 
